@@ -1,0 +1,414 @@
+
+.sticky-nav {
+    background-color: #2c3e50; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.nav-name {
+    font-size: 1.5em;
+    color: #ecf0f1; 
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; 
+}
+
+.sticky-nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px; 
+    transition: background-color 0.3s;
+}
+
+.sticky-nav a:hover {
+    background-color: #34495e; 
+}
+/* home section */
+.home-text h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: skewX(-25deg);
+    transition: left 1s;
+    pointer-events: none; /* make sure the pseudo-element does not interfere with any interactions */
+    z-index: 5;
+}
+
+.home-text h2:hover::before {
+    left: 150%; /* Move the shine effect across the text on hover */
+}
+
+/* Position relative to house the pseudo-element */
+.home-text h2 {
+    position: relative;
+}
+
+.home-section {
+    padding: 50px 5%; /* 5% horizontal padding to keep content aligned with the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f1; /* A soft, off-white background color */
+    min-height: 80vh; /* Occupy at least 80% of the viewport height */
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Gap between the image and text content */
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column; /* Stack the children vertically */
+    align-items: center; /* Center the children horizontally */
+    justify-content: center; /* Center the children vertically */
+    gap: 20px; /* Maintain a gap between the elements inside */
+    width: 100%; /* Take the full width of its parent */
+    text-align: center; /* Center align the text */
+}
+
+
+.home-text h2 {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+.home-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2c3e50; 
+    color: #ecf0f1;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    align-items: center;
+    transition: transform 0.5; 
+}
+
+.cta-button:hover {
+    transform: translateY(-5px); 
+}
+
+/* Animation Stuff */ 
+@keyframes homepageFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-section {
+    animation: homepageFadeInUp 1.2s ease-out forwards;
+    opacity: 0; /* Set initial opacity to 0 so it's initially invisible */
+}
+
+.cta-button:hover {
+    background-color: #34495e;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.home-text h2 {
+    overflow: hidden; 
+    border-right: .15em solid #2c3e50; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: typewriter 4s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+
+
+
+
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #2c3e50;
+    }
+}
+
+
+.cta-button:hover {
+    background-color: #34495e;
+    transform: scale(1.05); /* Button grows by 5% */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#about-me-section {
+    background-color: #fff;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;  /* To make the image circular */
+    margin-right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+.about-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Add some space between the content and the button */
+}
+
+
+
+#projects-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.projects-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.project-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue */
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-link:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-2px);
+}
+
+
+/* certification section */
+
+#certification-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.certification-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+}
+
+.certification-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.certification-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.certification-details p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.certification-details a {
+    font-size: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.certification-details a:hover {
+    color: #0056b3;
+}
+
+
+/* contact section */
+
+#contact-section {
+    background-color: #fff;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.contact-icon:hover img {
+    transform: scale(1.1);
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+    transform: scale(1.05);
+}
