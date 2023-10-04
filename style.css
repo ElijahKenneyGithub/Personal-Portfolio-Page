@@ -215,7 +215,7 @@ h2 {
 .about-button {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Add some space between the content and the button */
+    margin-top: 20px; 
 }
 
 
